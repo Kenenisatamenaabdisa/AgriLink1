@@ -1,76 +1,157 @@
-# AgriLink
+# 🌾 AgriLink — Ethiopia's Direct Farm-to-Table Marketplace
 
-### Fresh produce. Fairer trade. Direct connections.
-
-AgriLink is a full-stack Flutter marketplace that connects Ethiopian farmers directly with buyers. Farmers can showcase their products, buyers can discover and order local produce, and administrators can manage the marketplace from a dedicated web dashboard.
-
-<p>
-  <a href="https://github.com/Kenenisatamenaabdisa/AgriLink1"><img src="https://img.shields.io/badge/status-in%20development-1b6b3a?style=flat-square" alt="Project status"></a>
-  <a href="https://flutter.dev"><img src="https://img.shields.io/badge/Flutter-3.x-02569B?style=flat-square&logo=flutter&logoColor=white" alt="Flutter"></a>
-  <a href="https://supabase.com"><img src="https://img.shields.io/badge/backend-Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white" alt="Supabase"></a>
-  <img src="https://img.shields.io/badge/license-private-lightgrey?style=flat-square" alt="License">
+<p align="center">
+  <strong>Connecting Ethiopian farmers directly with buyers</strong>
 </p>
 
-## Why AgriLink?
+<p align="center">
+  A modern marketplace for discovering local produce, building farmer-buyer relationships, and managing agricultural orders from one connected platform.
+</p>
 
-Smallholder farmers deserve better access to customers and clearer pricing. AgriLink provides a digital route from farm to buyer that keeps the experience practical, local, and transparent.
+<p align="center">
+  <a href="https://github.com/Kenenisatamenaabdisa/AgriLink1"><img src="https://img.shields.io/badge/status-in%20development-1B6B3A?style=for-the-badge" alt="Project status"></a>
+  <a href="https://flutter.dev"><img src="https://img.shields.io/badge/Flutter-3.x-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter"></a>
+  <a href="https://dart.dev"><img src="https://img.shields.io/badge/Dart-3.11%2B-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart"></a>
+  <a href="https://supabase.com"><img src="https://img.shields.io/badge/Supabase-Backend-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase"></a>
+</p>
 
-**For buyers**
-- Browse products and farmer profiles in one marketplace
-- Add produce to a cart and place orders in ETB
-- Track orders, review purchases, and message farmers
-- Use the app in English, Amharic, or Afaan Oromo
+---
 
-**For farmers**
-- Create a public farmer profile and manage products
-- Set availability, pricing, categories, and images
-- Receive orders and communicate with buyers
-- View earnings and manage a direct customer relationship
+## 📋 Table of Contents
 
-**For administrators**
-- Monitor farmers, products, orders, and support activity
-- Manage marketplace data from a responsive Flutter web portal
-- Export order data for reporting and operations
+- [About the Project](#-about-the-project)
+- [Key Features](#-key-features)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Admin Panel](#-admin-panel)
+- [Database](#-database)
+- [Development Checks](#-development-checks)
+- [Contributing](#-contributing)
+- [Author](#-author)
 
-## Product Highlights
+---
 
-| Marketplace | Operations | Platform |
-| --- | --- | --- |
-| Product discovery and search | Order lifecycle and tracking | Flutter mobile app |
-| Farmer profiles and reviews | Cart and checkout | Flutter web admin portal |
-| Bulk ordering for businesses | Notifications and messaging | Supabase authentication and database |
-| Localized buyer experience | Invoice generation | ETB payments with Chapa integration |
+## 📖 About the Project
 
-## Repository Structure
+**AgriLink** is a full-stack Flutter marketplace designed to make agricultural trade more direct and accessible in Ethiopia.
+
+Smallholder farmers can present their products to a wider audience, while buyers can find fresh local produce, communicate with farmers, place orders, and follow delivery progress. A dedicated web admin portal gives platform operators the tools to manage users, products, orders, and support activity.
+
+### The platform connects three experiences
+
+- **Farmers** can create profiles, list products, manage availability, receive orders, and track earnings.
+- **Buyers** can browse products, compare farmer profiles, add items to a cart, check out, and review purchases.
+- **Administrators** can oversee users, product listings, orders, support requests, and marketplace operations.
+
+---
+
+## 🚀 Key Features
+
+### 🛒 Marketplace
+
+- Product discovery with search, categories, pricing, and availability
+- Farmer profiles with location, farm information, ratings, and reviews
+- Rich product details with images, stock information, and purchasing actions
+- Cart, checkout, order history, and invoice generation
+- Bulk ordering support for business buyers
+
+### 👨‍🌾 Farmer Tools
+
+- Farmer registration and profile management
+- Product creation and inventory management
+- Farmer dashboard with order and earnings views
+- Customer messaging and order communication
+- Regional farmer information across Ethiopia
+
+### 📦 Orders and Payments
+
+- Order status tracking from pending through delivery
+- Chapa payment integration with ETB support
+- Cash on Delivery, mobile money, and bank transfer options
+- Payment test mode for development checkout flows
+- Order notifications and downloadable order data in the admin panel
+
+### 💬 Communication
+
+- Direct buyer-farmer messaging
+- Supabase-backed real-time communication services
+- Push notifications with Firebase Cloud Messaging
+- Local notifications for important order and account events
+
+### 🌍 Localization and Accessibility
+
+- English interface
+- Amharic interface (አማርኛ)
+- Afaan Oromo interface
+- Region-aware marketplace content
+- Voice-enabled search support through speech-to-text services
+
+### 📊 Admin Panel
+
+- Dashboard for marketplace activity and key metrics
+- User and farmer management
+- Product review and moderation workflows
+- Order oversight and operational support
+- CSV order export for reporting
+
+---
+
+## 🛠 Tech Stack
+
+| Layer | Technology |
+| --- | --- |
+| Mobile and web client | Flutter and Dart |
+| State management | Provider |
+| Backend and database | Supabase, PostgreSQL, Auth, Storage, and Realtime |
+| Payments | Chapa with ETB support |
+| Push notifications | Firebase Cloud Messaging |
+| Local notifications | Flutter Local Notifications |
+| Offline and local storage | Hive and Shared Preferences |
+| Location services | Geolocator |
+| Voice search | Speech-to-text |
+| Image handling | Image Picker and Cached Network Image |
+| Documents | PDF and Printing packages |
+| Admin portal | Flutter Web |
+
+---
+
+## 📂 Project Structure
 
 ```text
-.
-├── AgriLink-main/
-│   ├── agridirect_app/       # Main Flutter application for buyers and farmers
-│   ├── admin_panel/           # Flutter web administration portal
-│   ├── products_migration.sql # Product table migration
-│   └── README.md              # App-specific notes
-└── README.md                  # Project overview and setup
+AgriLink1/
+├── README.md
+└── AgriLink-main/
+    ├── agridirect_app/          # Main Flutter app for buyers and farmers
+    │   ├── lib/
+    │   │   ├── models/          # User, farmer, product, order, and message models
+    │   │   ├── providers/       # Application state and localization providers
+    │   │   ├── screens/          # Marketplace, auth, orders, chat, and profile screens
+    │   │   ├── services/         # Auth, products, orders, payments, and notifications
+    │   │   ├── widgets/          # Reusable UI components
+    │   │   └── setup/            # Supabase schema and migration scripts
+    │   └── pubspec.yaml
+    │
+    ├── admin_panel/              # Flutter Web admin dashboard
+    │   ├── lib/
+    │   │   ├── models/           # Admin data models
+    │   │   ├── screens/          # Dashboard, farmers, products, orders, and support
+    │   │   └── services/         # Admin data services
+    │   └── pubspec.yaml
+    │
+    └── products_migration.sql   # Product table migration
 ```
 
-## Technology
+---
 
-- **Client:** Flutter and Dart
-- **State and navigation:** Provider
-- **Backend:** Supabase Auth, PostgreSQL, Storage, and Realtime
-- **Payments:** Chapa with ETB support and a local test mode
-- **Notifications:** Firebase Cloud Messaging and local notifications
-- **Documents:** PDF invoice generation and printing
-- **Supported platforms:** Android, iOS, Web, Windows, macOS, and Linux targets are included in the main app
-
-## Getting Started
+## 🏁 Getting Started
 
 ### Prerequisites
 
-- Flutter SDK with Dart 3.11 or newer
-- A Supabase project
-- A Chapa account for live payment testing
-- Firebase configuration for push notifications
+- [Flutter SDK](https://docs.flutter.dev/get-started/install) with Dart 3.11 or newer
+- A [Supabase](https://supabase.com/) project
+- A [Chapa](https://chapa.co/) account for live payment testing
+- A Firebase project for push notifications
 
 ### 1. Clone the repository
 
@@ -79,24 +160,36 @@ git clone https://github.com/Kenenisatamenaabdisa/AgriLink1.git
 cd AgriLink1/AgriLink-main
 ```
 
-### 2. Configure the backend
-
-1. Create a Supabase project.
-2. Run `agridirect_app/lib/setup/supabase_schema.sql` in the Supabase SQL editor.
-3. Apply `products_migration.sql` if your existing database needs the product fields migration.
-4. Add the required Supabase, Chapa, and Firebase values to the app's local environment configuration.
-
-Never commit service-account files, secret API keys, or production credentials. Use local configuration and rotate any credential that has been exposed.
-
-### 3. Run the mobile application
+### 2. Install mobile app dependencies
 
 ```bash
 cd agridirect_app
 flutter pub get
+```
+
+### 3. Configure the backend
+
+1. Create a Supabase project.
+2. Run [`supabase_schema.sql`](AgriLink-main/agridirect_app/lib/setup/supabase_schema.sql) in the Supabase SQL Editor.
+3. Apply [`migration.sql`](AgriLink-main/agridirect_app/lib/setup/migration.sql) when upgrading an existing database.
+4. Apply [`products_migration.sql`](AgriLink-main/products_migration.sql) if the product table needs the additional product fields.
+5. Configure the local Supabase, Chapa, Firebase, and notification values required by your environment.
+
+> **Security:** Never commit service-account files, secret API keys, or production credentials. Use local configuration for development and rotate any credential that may have been exposed.
+
+### 4. Run the application
+
+```bash
 flutter run
 ```
 
-### 4. Run the admin portal
+The main app includes Android, iOS, web, Windows, macOS, and Linux project targets.
+
+---
+
+## 🖥 Admin Panel
+
+The admin panel is a separate Flutter Web application for marketplace operations.
 
 ```bash
 cd ../admin_panel
@@ -104,9 +197,30 @@ flutter pub get
 flutter run -d chrome
 ```
 
-For payment development, the app supports a test mode so checkout flows can be exercised without processing a live transaction.
+The portal includes views for the dashboard, farmers, products, orders, and support workflows. Admin authentication and data access are handled through the shared Supabase backend.
 
-## Development Checks
+---
+
+## 🗃 Database
+
+AgriLink uses Supabase PostgreSQL for structured marketplace data, authentication, storage, and real-time services.
+
+| Table | Purpose |
+| --- | --- |
+| `users` | Buyer, farmer, business, and admin accounts |
+| `farmers` | Farmer profiles, regions, ratings, and verification data |
+| `products` | Product listings, pricing, categories, stock, and images |
+| `orders` | Buyer orders, farmer relationships, totals, and status |
+| `order_items` | Products and quantities belonging to each order |
+| `messages` | Direct buyer-farmer conversations |
+| `reviews` | Product and farmer ratings and feedback |
+| `notifications` | In-app account and order notifications |
+
+The complete schema is available in [`supabase_schema.sql`](AgriLink-main/agridirect_app/lib/setup/supabase_schema.sql).
+
+---
+
+## ✅ Development Checks
 
 Run these commands from either Flutter package directory:
 
@@ -115,18 +229,33 @@ flutter analyze
 flutter test
 ```
 
-## Project Direction
+For payment development, use the app's test mode before connecting a live Chapa account.
 
-AgriLink is being developed as a practical foundation for a local digital food marketplace. Near-term priorities include strengthening production configuration, improving delivery workflows, and expanding operational reporting for farmers and administrators.
+---
 
-## Contributing
+## 🤝 Contributing
 
-Issues and focused pull requests are welcome. Before opening a change, run the analyzer and relevant tests, describe the user impact, and avoid committing credentials or generated build artifacts.
+Contributions and focused improvements are welcome.
 
-## License
+1. Fork the repository.
+2. Create a feature branch: `git checkout -b feature/your-feature`.
+3. Make and test your changes.
+4. Run `flutter analyze` and the relevant tests.
+5. Commit your work and open a pull request with a clear description of the user impact.
 
-This project is currently maintained as a private portfolio and development project. Contact the repository owner for reuse or licensing questions.
+Please do not commit generated build output, service-account files, or secret credentials.
+
+---
+
+## 👤 Author
+
+**Kenenisa Abdisa**
+
+- GitHub: [@Kenenisatamenaabdisa](https://github.com/Kenenisatamenaabdisa)
+- Project: [AgriLink1](https://github.com/Kenenisatamenaabdisa/AgriLink1)
+
+---
 
 <p align="center">
-  Built to make local food commerce more direct, visible, and fair.
+  <em>🌱 Connecting Ethiopia's farms to the people they serve. 🌍</em>
 </p>
